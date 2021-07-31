@@ -1,0 +1,119 @@
+:root {
+  --bright-orenge: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  background-color: var(--light-gray);
+}
+
+p,
+button {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main-container {
+    max-width: 90vw;
+    margin: 75px auto;
+}
+.card {
+    padding: 36px;
+}
+.card1 {
+    background-color: var(--bright-orenge);
+    border-radius: 1vh 1vh 0 0;
+}
+.card2 {
+    background-color: var(--dark-cyan);
+}
+.card3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 1vh 1vh;
+}
+.card h1 {
+    color: var(--light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h1, p, button {margin-top: 20px;}
+p {
+    color: var(--transparent-white);
+}
+
+.btnPrimary {
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 1px solid var(--light-gray);
+}
+.card2 .btnPrimary {
+  color: var(--dark-cyan);
+}
+.card2 .btnPrimary:hover {
+  cursor: pointer;
+  color: var(--light-gray);
+  background-color: var(--dark-cyan);
+}
+.card3 .btnPrimary {
+  color: var(--very-dark-cyan);
+}
+.card3 .btnPrimary:hover {
+  cursor: pointer;
+  color: var(--light-gray);
+  background-color: var(--very-dark-cyan);
+}
+.card1 .btnPrimary {
+  color: var(--bright-orenge);
+}
+.card1 .btnPrimary:hover {
+  cursor: pointer;
+  color: var(--light-gray);
+  background-color: var(--bright-orenge);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 992px){
+  .main-container {
+    max-width: 65vw;
+    max-height: 100vh;
+    margin-block: 125px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+  }
+  .card {
+    flex: 1;
+    height: 100%;
+  }
+  .card1 {
+    border-radius: 1vh 0 0 1vh;
+  }
+  .card3 {
+    border-radius: 0 1vh 1vh 0;
+  }
+  .btnPrimary {
+    margin-top: 75px;
+  }
+  p {
+    line-height: 1.5;
+    padding-right: 20px;
+  }
+}
